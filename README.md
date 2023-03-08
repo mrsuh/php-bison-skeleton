@@ -12,7 +12,7 @@ A set of Bison skeleton files that can be used to generate a Bison parser writte
 
 ### Installation
 ```bash
-componser require --dev mrsuh/php-bison-skeleton
+composer require --dev mrsuh/php-bison-skeleton
 ```
 
 ### Usage
