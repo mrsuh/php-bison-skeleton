@@ -1,0 +1,28 @@
+{
+    "name": "mrsuh/php-bison-skeleton",
+    "type": "library",
+    "description": "PHP skeleton for Bison",
+    "license": "GPL-3.0-only",
+    "keywords": [
+        "bison",
+        "skeleton",
+        "php",
+        "parser"
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "authors": [
+        {
+            "name": "Anton Sukhachev",
+            "email": "mrsuh6@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "symfony/process": "^5.4",
+        "phpunit/phpunit": "^9.6"
+    },
+    "scripts": {
+        "test": "php vendor/bin/phpunit tests --colors=auto"
+    }
+}
