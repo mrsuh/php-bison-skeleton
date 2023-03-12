@@ -303,6 +303,13 @@ m4_define([b4_rhs_value],
 [b4_symbol_value([b4_rhs_data([$1], [$2])], [$3], [$4])])
 
 
+# b4_lhs_location()
+# -----------------
+# Expansion of @$.
+m4_define([b4_lhs_location],
+[($yyloc)])
+
+
 # b4_rhs_location(RULE-LENGTH, POS)
 # ---------------------------------
 # Expansion of @POS, where the current rule has RULE-LENGTH symbols

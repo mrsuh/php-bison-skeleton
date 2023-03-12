@@ -81,7 +81,7 @@ b4_output_begin([b4_parser_file_name])[
  * A Bison parser, automatically generated from <tt>]m4_bpatsubst(b4_file_name, [^"\(.*\)"$], [\1])[</tt>.
  *
  * @@author LALR (1) parser skeleton written by Paolo Bonzini.
- * Port to PHP language was done by Anton Sukhachev.
+ * Port to PHP language was done by Anton Sukhachev <mrsuh6@@gmail.com>.
  */
 
  /**
@@ -265,19 +265,19 @@ interface LexerInterface {
       $this->height -= $num;
     }
 
-    public function stateAt(int $i): int {
+    public function &stateAt(int $i): int {
       return $this->stateStack[$this->height - $i];
     }
 ]b4_locations_if([[
 
-    public function locationAt(int $i): ]b4_location_type[ {
+    public function &locationAt(int $i): ]b4_location_type[ {
       return $this->locStack[$this->height - $i];
     }
 ]])[
     /**
      * @@return ]b4_yystype[
      */
-    public function valueAt(int $i) {
+    public function &valueAt(int $i) {
       return $this->valueStack[$this->height - $i];
     }
 
@@ -336,6 +336,7 @@ interface LexerInterface {
 ]b4_parser_class_declaration[
 {
 ]b4_identification[
+]b4_percent_code_get([[parser]])[
 ][
 ]b4_parse_error_bmatch(
            [detailed\|verbose], [[
@@ -601,11 +602,28 @@ interface LexerInterface {
    */
   private function yySymbolPrint(string $s, SymbolKind $yykind, $yyvalue]b4_locations_if([, ]b4_location_type[ $yylocation])[): void {
       if (0 < $this->yydebug) {
+          switch(true) {
+              case is_array($yyvalue):
+                  $value = sprintf('array(%d)', count($yyvalue));
+                  break;
+              case is_null($yyvalue):
+                  $value = 'null';
+                  break;
+              case is_object($yyvalue):
+                  if(method_exists($yyvalue, '__toString')) {
+                      $value = (string)$yyvalue;
+                  } else {
+                      $value = get_class($yyvalue);
+                  }
+                  break;
+              default:
+                  $value = (string)$yyvalue;
+          }
           $this->yycdebug($s
                    . ($yykind->getCode() < ]b4_parser_class[::YYNTOKENS ? " token " : " nterm ")
                    . $yykind->getName() . " ("]b4_locations_if([
                    . $yylocation . ": "])[
-                   . ($yyvalue === null ? "(null)" : (is_array($yyvalue) ? '[]' : (string)$yyvalue)) . ")");
+                   . $value . ")");
       }
   }]])[
 
