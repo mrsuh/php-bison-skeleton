@@ -9,7 +9,7 @@
 %left '-' '+'
 
 %%
-input:
+start:
   expression                       { printf("%d\n", $1); }
 ;
 

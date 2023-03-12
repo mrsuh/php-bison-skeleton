@@ -45,7 +45,7 @@
  * A Bison parser, automatically generated from <tt>/Users/newuser/web/home/php-bison-skeleton/bin/../examples/calc-pull/grammar.y</tt>.
  *
  * @author LALR (1) parser skeleton written by Paolo Bonzini.
- * Port to PHP language was done by Anton Sukhachev.
+ * Port to PHP language was done by Anton Sukhachev <mrsuh6@gmail.com>.
  */
 
  /**
@@ -177,14 +177,14 @@ interface LexerInterface {
       $this->height -= $num;
     }
 
-    public function stateAt(int $i): int {
+    public function &stateAt(int $i): int {
       return $this->stateStack[$this->height - $i];
     }
 
     /**
      * @return mixed
      */
-    public function valueAt(int $i) {
+    public function &valueAt(int $i) {
       return $this->valueStack[$this->height - $i];
     }
 
@@ -208,7 +208,7 @@ interface LexerInterface {
     public const S_4_ = 4;         /* '-'  */
     public const S_5_ = 5;         /* '+'  */
     public const S_YYACCEPT = 6;   /* $accept  */
-    public const S_input = 7;      /* input  */
+    public const S_start = 7;      /* start  */
     public const S_expression = 8; /* expression  */
 
 
@@ -224,7 +224,7 @@ interface LexerInterface {
 
 
     private const NAMES = array("\"end of file\"", "error", "\"invalid token\"", "T_NUMBER", "'-'",
-  "'+'", "\$accept", "input", "expression", null);
+  "'+'", "\$accept", "start", "expression", null);
 
     public function getName(): string {
         return trim(self::NAMES[$this->yycode], '"\'');
@@ -242,6 +242,7 @@ class Parser
 
   /** Name of the skeleton that generated this parser.  */
   public const BISON_SKELETON = "/Users/newuser/web/home/php-bison-skeleton/bin/../src/php-skel.m4";
+
 
 
 
@@ -383,7 +384,7 @@ class Parser
 
     switch ($yyn)
       {
-          case 2: /* input: expression  */
+          case 2: /* start: expression  */
     /* "/Users/newuser/web/home/php-bison-skeleton/bin/../examples/calc-pull/grammar.y":9  */
                                    { printf("%d\n", $yystack->valueAt(0)); };
   break;
@@ -408,7 +409,7 @@ class Parser
 
 
 
-/* "/Users/newuser/web/home/php-bison-skeleton/bin/../examples/calc-pull/parser.php":412  */
+/* "/Users/newuser/web/home/php-bison-skeleton/bin/../examples/calc-pull/parser.php":413  */
 
         default: break;
       }

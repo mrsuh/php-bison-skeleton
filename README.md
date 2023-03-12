@@ -6,19 +6,24 @@
 
 A set of Bison skeleton files that can be used to generate a Bison parser written in PHP.
 
-### Requirements:
+## Requirements:
 * PHP >= 7.4
 * Bison >= 3.8
 
-### Installation
+## Installation
 ```bash
 composer require --dev mrsuh/php-bison-skeleton
 ```
 
-### Usage
+## Usage
 ```bash
 bison -S vendor/mrsuh/php-bison-skeleton/src/php-skel.m4 -o parser.php grammar.y
 ```
 
-### Example
-You can find examples in the [examples directory](./examples)
+## Examples
+You can find examples in the [directory](./examples)
+
+### Tests
+```bash
+composer test
+```
