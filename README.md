@@ -20,8 +20,11 @@ composer require --dev mrsuh/php-bison-skeleton
 bison -S vendor/mrsuh/php-bison-skeleton/src/php-skel.m4 -o parser.php grammar.y
 ```
 
+## Posts
+* [PHP Skeleton for Bison](https://dev.to/mrsuh/php-skeleton-for-bison-po2)
+
 ## Examples
-You can find examples in the [directory](./examples)
+You can find examples in the [folder](./examples)
 
 ### Tests
 ```bash
