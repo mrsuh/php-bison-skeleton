@@ -12,6 +12,11 @@
     "require": {
         "php": ">=7.4"
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Anton Sukhachev",

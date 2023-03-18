@@ -1,0 +1,61 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "689d5fce8bba442c5726edcc04a161ae",
+    "packages": [
+        {
+            "name": "mrsuh/tree-printer",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrsuh/tree-printer.git",
+                "reference": "c559f137d3bdf810107d961f77212304d907bb48"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrsuh/tree-printer/zipball/c559f137d3bdf810107d961f77212304d907bb48",
+                "reference": "c559f137d3bdf810107d961f77212304d907bb48",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 7.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mrsuh\\Tree\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Sukhachev",
+                    "email": "mrsuh6@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/mrsuh/tree-printer/issues",
+                "source": "https://github.com/mrsuh/tree-printer/tree/1.0.0"
+            },
+            "time": "2023-03-13T18:18:02+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
