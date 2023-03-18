@@ -96,7 +96,7 @@ php parser.php <<< "1 + 2"
 3
 ```
 
-More examples are in the [folder](./examples)
+See more examples in the [folder](./examples)
 
 ### Tests
 ```bash
