@@ -22,6 +22,7 @@ bison -S vendor/mrsuh/php-bison-skeleton/src/php-skel.m4 -o parser.php grammar.y
 
 ## Posts
 * [PHP Skeleton for Bison](https://dev.to/mrsuh/php-skeleton-for-bison-po2)
+* [AST parser with PHP and Bison](https://dev.to/mrsuh/ast-parser-with-php-and-bison-l5h)
 
 ## Example
 
