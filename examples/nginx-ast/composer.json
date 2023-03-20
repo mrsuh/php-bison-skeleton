@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        },
+        "files": ["lib/parser.php"]
+    },
+    "require": {
+        "php": ">= 7.4",
+        "mrsuh/tree-printer": "^1.0",
+        "doctrine/lexer": "^2.1"
+    }
+}
