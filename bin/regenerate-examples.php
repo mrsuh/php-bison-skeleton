@@ -16,7 +16,7 @@ foreach (scandir($examplesDirectory) as $directoryName) {
     echo $directoryName . PHP_EOL;
 
     $parserPath = $examplesDirectory . '/' . $directoryName . '/parser.php';
-    if (in_array($directoryName, ['calc-ast', 'nginx-ast'], true)) {
+    if (in_array($directoryName, ['calc-ast', 'nginx-ast', 'json-ast'], true)) {
         $parserPath = $examplesDirectory . '/' . $directoryName . '/lib/parser.php';
     }
 
