@@ -1,0 +1,18 @@
+{
+    "fieldString": "string",
+    "fieldNumber": 99,
+    "fieldBoolTrue": true,
+    "fieldBoolFalse": false,
+    "fieldNull": null,
+    "fieldEmptyArray": [],
+    "fieldEmptyObject": {},
+    "fieldArray": [
+        "string",
+        99,
+        true,
+        false,
+        null,
+        {},
+        []
+    ]
+}

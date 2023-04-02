@@ -1,0 +1,23 @@
+{
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        },
+        "files": ["lib/parser.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "doctrine/lexer": "^2.0",
+        "mrsuh/tree-printer": "^1.0"
+    },
+    "require-dev": {
+        "phpbench/phpbench": "^1.2"
+    },
+    "scripts": {
+        "bench": "php vendor/bin/phpbench run tests --report=my-report"
+    }
+}
