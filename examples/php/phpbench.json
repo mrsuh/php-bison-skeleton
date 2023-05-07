@@ -1,0 +1,15 @@
+{
+    "$schema": "./vendor/phpbench/phpbench/phpbench.schema.json",
+    "runner.bootstrap": "vendor/autoload.php",
+    "report.generators": {
+        "my-report": {
+            "generator": "expression",
+            "cols": {
+                "subject": null,
+                "mem_peak": null,
+                "mode": null,
+                "rstdev": null
+            }
+        }
+    }
+}
