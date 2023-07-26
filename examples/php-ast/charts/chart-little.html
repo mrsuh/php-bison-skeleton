@@ -1,0 +1,48 @@
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx    = document.getElementById('myChart');
+    const labels = ['PHP7.4', 'PHP8.0', 'PHP8.1', 'PHP8.2'];
+    const data   = {
+        labels:   labels,
+        datasets: [
+            {
+                label:                  'Bison',
+                data:                   [620.894, 608.748, 593.993, 587.426],
+                borderColor:            '#66B2FF',
+                backgroundColor:        '#66B2FF',
+                cubicInterpolationMode: 'monotone',
+                borderWidth:            8,
+
+            }, {
+                label:                  'KmYacc',
+                data:                   [446.706, 440.669, 428.443, 423.774],
+                borderColor:            '#6DBEBE',
+                backgroundColor:        '#6DBEBE',
+                cubicInterpolationMode: 'monotone',
+                borderWidth:            8,
+            },
+        ],
+    };
+
+    Chart.defaults.font.size = 30;
+    new Chart(ctx, {
+        type:    'line',
+        data:    data,
+        options: {
+            responsive: true,
+            scales:     {
+                y: {
+                    title: {
+                        display: true,
+                        text:    'microseconds',
+                    },
+                },
+            },
+        },
+    });
+</script>

@@ -45,7 +45,7 @@ class Bench
      * @Iterations(10)
      * @RetryThreshold(1.0)
      */
-    public function benchNikicLittle()
+    public function benchKmYaccLittle()
     {
         $this->nikicParse($this->littleContent);
     }
@@ -67,7 +67,7 @@ class Bench
      * @Iterations(10)
      * @RetryThreshold(1.0)
      */
-    public function benchNikicMid()
+    public function benchKmYaccMid()
     {
         $this->nikicParse($this->midContent);
     }
@@ -89,7 +89,7 @@ class Bench
      * @Iterations(10)
      * @RetryThreshold(2.0)
      */
-    public function benchNikicBig()
+    public function benchKmYaccBig()
     {
         $this->nikicParse($this->bigContent);
     }
