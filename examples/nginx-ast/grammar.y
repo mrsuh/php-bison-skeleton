@@ -3,7 +3,7 @@
 %code parser {
     private Node $ast;
     public function setAst(Node $ast): void { $this->ast = $ast; }
-    public function getAst(): Node { return $this>ast; }
+    public function getAst(): Node { return $this->ast; }
 }
 
 %token T_SERVER

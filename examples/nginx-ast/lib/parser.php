@@ -344,9 +344,9 @@ class Parser
 /* "%code parser" blocks.  */
 /* "grammar.y":3  */
 
-    private static Node $ast;
-    public static function setAst(Node $ast): void { static::$ast = $ast; }
-    public static function getAst(): Node { return static::$ast; }
+    private Node $ast;
+    public function setAst(Node $ast): void { $this->ast = $ast; }
+    public function getAst(): Node { return $this->ast; }
 
 /* "lib/parser.php":352  */
 
@@ -492,7 +492,7 @@ class Parser
       {
           case 2: /* server: T_SERVER '{' server_body_list '}'  */
     /* "grammar.y":39  */
-                                    { Parser::setAst(new Node('T_SERVER', [], $yystack->valueAt(1))); };
+                                    { self::setAst(new Node('T_SERVER', [], $yystack->valueAt(1))); };
   break;
 
 
