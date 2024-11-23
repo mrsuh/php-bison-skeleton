@@ -21,10 +21,10 @@ bison -S vendor/mrsuh/php-bison-skeleton/src/php-skel.m4 -o parser.php grammar.y
 ```
 
 ## Posts
-* [PHP Skeleton for Bison](https://dev.to/mrsuh/php-skeleton-for-bison-po2)
-* [AST parser with PHP and Bison](https://dev.to/mrsuh/ast-parser-with-php-and-bison-l5h)
-* [Nginx parser with PHP and Bison](https://dev.to/mrsuh/nginx-parser-with-php-and-bison-1k5)
-* [JSON parser with PHP and Bison](https://dev.to/mrsuh/json-parser-with-php-and-bison-385n)
+* [PHP Skeleton for Bison](https://mrsuh.com/articles/2023/php-skeleton-for-bison/)
+* [AST parser with PHP and Bison](https://mrsuh.com/articles/2023/ast-parser-with-php-and-bison/)
+* [Nginx parser with PHP and Bison](https://mrsuh.com/articles/2023/nginx-parser-with-php-and-bison/)
+* [JSON parser with PHP and Bison](https://mrsuh.com/articles/2023/json-parser-with-php-and-bison/)
 
 ## Docker
 * [Bison docker image](https://github.com/mrsuh/docker-bison)
